@@ -11,10 +11,6 @@ const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     // Simulate checking for existing session
-    const savedUser = localStorage.getItem('sen_user');
-    if (savedUser) {
-      setUser(JSON.parse(savedUser));
-    }
     setLoading(false);
   }, []);
 
@@ -31,13 +27,13 @@ const AuthProvider = ({ children }) => {
       totalDownloads: 284
     };
     setUser(mockUser);
-    localStorage.setItem('sen_user', JSON.stringify(mockUser));
+    // localStorage.setItem('sen_user', JSON.stringify(mockUser));
     return Promise.resolve(mockUser);
   };
 
   const logout = () => {
     setUser(null);
-    localStorage.removeItem('sen_user');
+    // localStorage.removeItem('sen_user');
   };
 
   const value = {
