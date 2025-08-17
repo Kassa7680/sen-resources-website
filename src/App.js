@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, Link, useNavigate } from 'react-router-dom';
 import { Search, Filter, Download, Star, Heart, User, Bell, Settings, Menu, X, Eye, Edit3, Crown, BookOpen, Clock, TrendingUp, Grid, List, Play, CheckCircle, ArrowRight, Shield, Zap, Users } from 'lucide-react';
 import RISEPlanner from './RISEPlanner.js';
+import ADHDFocusToolkit from './ADHDFocusToolkit.jsx';
 // Mock Authentication Context
 const AuthContext = React.createContext();
 
@@ -150,6 +151,12 @@ const LandingPage = () => {
     className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
   >
     Try RISE Planner Free
+  </button>
+      <button
+    onClick={() => navigate('/adhd-toolkit')}
+    className="bg-yellow-400 text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-colors"
+  >
+    🧠 Try ADHD Toolkit Free
   </button>
   <button
     onClick={() => navigate('/signup')}
@@ -1251,6 +1258,7 @@ const App = () => {
   <Route path="/login" element={<LoginPage />} />
   <Route path="/signup" element={<SignupPage />} />
   <Route path="/rise-planner" element={<RISEPlanner />} />
+    <Route path="/adhd-toolkit" element={<ADHDFocusToolkit />} />
           <Route
             path="/dashboard"
             element={
