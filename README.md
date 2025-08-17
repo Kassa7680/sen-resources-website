@@ -1,2 +1,2 @@
-# sen-resources-website
+# RAISE
 Professional SEN resources platform
