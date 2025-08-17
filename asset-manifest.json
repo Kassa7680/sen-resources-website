@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/sen-resources-website/static/css/main.01c58f69.css",
-    "main.js": "/sen-resources-website/static/js/main.c748b5a0.js",
+    "main.js": "/sen-resources-website/static/js/main.ddec9287.js",
     "index.html": "/sen-resources-website/index.html",
     "main.01c58f69.css.map": "/sen-resources-website/static/css/main.01c58f69.css.map",
-    "main.c748b5a0.js.map": "/sen-resources-website/static/js/main.c748b5a0.js.map"
+    "main.ddec9287.js.map": "/sen-resources-website/static/js/main.ddec9287.js.map"
   },
   "entrypoints": [
     "static/css/main.01c58f69.css",
-    "static/js/main.c748b5a0.js"
+    "static/js/main.ddec9287.js"
   ]
 }
