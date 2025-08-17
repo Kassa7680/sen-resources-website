@@ -1243,10 +1243,11 @@ const App = () => {
   return (
     <AuthProvider>
       <Router>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<SignupPage />} />
+      <Routes>
+  <Route path="/" element={<LandingPage />} />
+  <Route path="/login" element={<LoginPage />} />
+  <Route path="/signup" element={<SignupPage />} />
+  <Route path="/rise-planner" element={<RISEPlanner />} />
           <Route
             path="/dashboard"
             element={
