@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, Link, useNavigate } from 'react-router-dom';
 import { Search, Filter, Download, Star, Heart, User, Bell, Settings, Menu, X, Eye, Edit3, Crown, BookOpen, Clock, TrendingUp, Grid, List, Play, CheckCircle, ArrowRight, Shield, Zap, Users } from 'lucide-react';
-import RISEPlanner from './RISEPlanner';
+import RISEPlanner from './RISEPlanner.js';
 // Mock Authentication Context
 const AuthContext = React.createContext();
 
