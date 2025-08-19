@@ -241,18 +241,22 @@ const LandingPage = () => {
               </div>
             </div>
             
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onClick={() => alert('✋ Sensory Break Cards coming soon! We are building amazing tools for you!')}>
-              <div className="bg-gradient-to-br from-green-100 to-blue-100 h-48 flex items-center justify-center">
-                <span className="text-6xl">✋</span>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Sensory Break Cards</h3>
-                <p className="text-gray-600 mb-4">Quick regulation activities for home and classroom</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-500">8 pages • Ages 3-16</span>
-                  <div className="flex items-center">
-                    <Star className="h-4 w-4 text-yellow-400 mr-1" />
-                    <span className="text-sm">4.8</span>
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onClick={() => navigate('/pda-toolkit')}>
+  <div className="bg-gradient-to-br from-green-100 to-blue-100 h-48 flex items-center justify-center">
+    <span className="text-6xl">🤝</span>
+  </div>
+  <div className="p-6">
+    <h3 className="text-xl font-bold mb-2">PDA Choice Toolkit</h3>
+    <p className="text-gray-600 mb-4">Turn demands into choices for pathological demand avoidance</p>
+    <div className="flex justify-between items-center">
+      <span className="text-sm text-gray-500">4 tools • All ages</span>
+      <div className="flex items-center">
+        <Star className="h-4 w-4 text-yellow-400 mr-1" />
+        <span className="text-sm text-green-600 font-bold">NEW!</span>
+      </div>
+    </div>
+  </div>
+</div>
                   </div>
                 </div>
               </div>
