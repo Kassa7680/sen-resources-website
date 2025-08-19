@@ -200,7 +200,7 @@ const LandingPage = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onClick={() => navigate('/rise-planner')}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onClick={() => navigate('/rise-planner')}>
               <div className="bg-gradient-to-br from-purple-100 to-blue-100 h-48 flex items-center justify-center">
                 <span className="text-6xl">🌈</span>
               </div>
