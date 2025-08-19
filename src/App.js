@@ -240,8 +240,7 @@ const LandingPage = () => {
                 </div>
               </div>
             </div>
-            
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onClick={() => navigate('/pda-toolkit')}>
+         <div className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onClick={() => navigate('/pda-toolkit')}>
   <div className="bg-gradient-to-br from-green-100 to-blue-100 h-48 flex items-center justify-center">
     <span className="text-6xl">🤝</span>
   </div>
@@ -257,7 +256,8 @@ const LandingPage = () => {
     </div>
   </div>
 </div>
-              
+          </div>
+        </div>
       </section>
 
       {/* Testimonials */}
