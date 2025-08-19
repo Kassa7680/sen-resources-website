@@ -200,7 +200,7 @@ const LandingPage = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onClick={() => window.open('https://kassa7680.github.io/rise-planner', '_blank')}>
               <div className="bg-gradient-to-br from-purple-100 to-blue-100 h-48 flex items-center justify-center">
                 <span className="text-6xl">🌈</span>
               </div>
@@ -217,7 +217,7 @@ const LandingPage = () => {
               </div>
             </div>
             
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onClick={() => alert('🧠 ADHD Toolkit coming soon! Click OK to see our progress!')}>
               <div className="bg-gradient-to-br from-orange-100 to-red-100 h-48 flex items-center justify-center">
                 <span className="text-6xl">🧠</span>
               </div>
@@ -234,7 +234,7 @@ const LandingPage = () => {
               </div>
             </div>
             
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onClick={() => alert('✋ Sensory Break Cards coming soon! We are building amazing tools for you!')}>
               <div className="bg-gradient-to-br from-green-100 to-blue-100 h-48 flex items-center justify-center">
                 <span className="text-6xl">✋</span>
               </div>
