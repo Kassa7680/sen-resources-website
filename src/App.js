@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate, Link, useNavigate } f
 import { Search, Filter, Download, Star, Heart, User, Bell, Settings, Menu, X, Eye, Edit3, Crown, BookOpen, Clock, TrendingUp, Grid, List, Play, CheckCircle, ArrowRight, Shield, Zap, Users } from 'lucide-react';
 import RISEPlanner from './RISEPlanner.js';
 import ADHDFocusToolkit from './ADHDFocusToolkit.jsx';
+import PDAChoiceToolkit from './PDAChoiceToolkit';
 // Mock Authentication Context
 const AuthContext = React.createContext();
 
@@ -164,6 +165,12 @@ const LandingPage = () => {
   >
     Start 7-Day Free Trial
   </button>
+<button
+  onClick={() => navigate('/pda-toolkit')}
+  className="bg-green-400 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-300 transition-colors"
+>
+  🤝 Try PDA Toolkit Free
+</button>
 </div>
           <p className="text-purple-200 mt-4">No credit card required • Cancel anytime</p>
         </div>
@@ -1259,6 +1266,7 @@ const App = () => {
   <Route path="/signup" element={<SignupPage />} />
   <Route path="/rise-planner" element={<RISEPlanner />} />
     <Route path="/adhd-toolkit" element={<ADHDFocusToolkit />} />
+    <Route path="/pda-toolkit" element={<PDAChoiceToolkit />} />
           <Route
             path="/dashboard"
             element={
