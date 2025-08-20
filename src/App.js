@@ -150,25 +150,25 @@ const LandingPage = () => {
               onClick={() => navigate('/sen-planner')}
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
             >
-              Try Planner Free
+              Try SEN Planner Free
             </button>
             <button
-              onClick={() => navigate('/adhd-toolkit')}
+              onClick={() => navigate('/signup')}
               className="bg-purple-600 text-white border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-700 transition-colors"
             >
-              🧠 ADHD Toolkit
+              ADHD Toolkit (Premium)
             </button>
             <button
-              onClick={() => navigate('/pda-toolkit')}
+              onClick={() => navigate('/signup')}
               className="bg-purple-600 text-white border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-700 transition-colors"
             >
-              🤝 PDA Toolkit
+              PDA Toolkit (Premium)
             </button>
             <button
               onClick={() => navigate('/signup')}
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Start 7-Day Free Trial
+              Start 7-Day Free Trial (Full Access)
             </button>
           </div>
           <p className="text-purple-200 mt-4">No credit card required • Cancel anytime</p>
@@ -299,10 +299,10 @@ const LandingPage = () => {
             <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Basic</h3>
               <div className="text-4xl font-bold text-gray-900 mb-2">£9<span className="text-lg font-normal text-gray-600">/month</span></div>
-              <p className="text-gray-600 mb-6">Perfect for getting started</p>
+              <p className="text-gray-600 mb-6">Perfect for getting started with SEN Planner</p>
               <ul className="space-y-3 mb-8">
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" />Free Planner tool</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" />All online tools</li>
+                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" />Free SEN Planner tool</li>
+                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" />Visual schedule creation</li>
                 <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" />Standard PDF downloads</li>
                 <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" />Email support</li>
               </ul>
