@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, Link, useNavigate } from 'react-router-dom';
 import { Search, Filter, Download, Star, Heart, User, Bell, Settings, Menu, X, Eye, Edit3, Crown, BookOpen, Clock, TrendingUp, Grid, List, Play, CheckCircle, ArrowRight, Shield, Zap, Users } from 'lucide-react';
-import RISEPlanner from './RISEPlanner.js';
+import SENPlanner from './SENPlanner.js';
 import ADHDFocusToolkit from './ADHDFocusToolkit.jsx';
 import PDAChoiceToolkit from './PDAChoiceToolkit';
+
 // Mock Authentication Context
 const AuthContext = React.createContext();
 
@@ -29,13 +30,11 @@ const AuthProvider = ({ children }) => {
       totalDownloads: 284
     };
     setUser(mockUser);
-    // localStorage.setItem('sen_user', JSON.stringify(mockUser));
     return Promise.resolve(mockUser);
   };
 
   const logout = () => {
     setUser(null);
-    // localStorage.removeItem('sen_user');
   };
 
   const value = {
@@ -146,32 +145,32 @@ const LandingPage = () => {
           <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
             Downloadable visual schedules, behavior supports, and learning tools designed specifically for children with special educational needs. Perfect for home educators and school families.
           </p>
-         <div className="flex justify-center space-x-4">
-  <button
-    onClick={() => navigate('/rise-planner')}
-    className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
-  >
-    Try RISE Planner Free
-  </button>
-      <button
-    onClick={() => navigate('/adhd-toolkit')}
-    className="bg-yellow-400 text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-colors"
-  >
-    🧠 Try ADHD Toolkit Free
-  </button>
-  <button
-    onClick={() => navigate('/signup')}
-    className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors"
-  >
-    Start 7-Day Free Trial
-  </button>
-<button
-  onClick={() => navigate('/pda-toolkit')}
-  className="bg-green-400 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-300 transition-colors"
->
-  🤝 Try PDA Toolkit Free
-</button>
-</div>
+          <div className="flex justify-center space-x-4">
+            <button
+              onClick={() => navigate('/sen-planner')}
+              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
+            >
+              Try Planner Free
+            </button>
+            <button
+              onClick={() => navigate('/adhd-toolkit')}
+              className="bg-purple-600 text-white border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-700 transition-colors"
+            >
+              🧠 ADHD Toolkit
+            </button>
+            <button
+              onClick={() => navigate('/pda-toolkit')}
+              className="bg-purple-600 text-white border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-700 transition-colors"
+            >
+              🤝 PDA Toolkit
+            </button>
+            <button
+              onClick={() => navigate('/signup')}
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors"
+            >
+              Start 7-Day Free Trial
+            </button>
+          </div>
           <p className="text-purple-200 mt-4">No credit card required • Cancel anytime</p>
         </div>
       </section>
@@ -207,12 +206,12 @@ const LandingPage = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onClick={() => navigate('/rise-planner')}>
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onClick={() => navigate('/sen-planner')}>
               <div className="bg-gradient-to-br from-purple-100 to-blue-100 h-48 flex items-center justify-center">
                 <span className="text-6xl">🌈</span>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">ASD Visual Schedules</h3>
+                <h3 className="text-xl font-bold mb-2">Visual Schedules</h3>
                 <p className="text-gray-600 mb-4">Morning, afternoon, and bedtime routines with customizable activities</p>
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-gray-500">7 pages • Ages 3-16</span>
@@ -224,7 +223,7 @@ const LandingPage = () => {
               </div>
             </div>
             
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onClick={() => alert('🧠 ADHD Toolkit coming soon! Click OK to see our progress!')}>
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onClick={() => navigate('/adhd-toolkit')}>
               <div className="bg-gradient-to-br from-orange-100 to-red-100 h-48 flex items-center justify-center">
                 <span className="text-6xl">🧠</span>
               </div>
@@ -232,30 +231,31 @@ const LandingPage = () => {
                 <h3 className="text-xl font-bold mb-2">ADHD Focus Toolkit</h3>
                 <p className="text-gray-600 mb-4">Attention tracking, brain breaks, and focus strategies</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-500">12 pages • Ages 6-14</span>
+                  <span className="text-sm text-gray-500">4 tools • Ages 6-14</span>
                   <div className="flex items-center">
-                    <Crown className="h-4 w-4 text-yellow-500 mr-1" />
-                    <span className="text-sm text-yellow-600">Premium</span>
+                    <Crown className="h-4 w-4 text-purple-500 mr-1" />
+                    <span className="text-sm text-purple-600">Premium</span>
                   </div>
                 </div>
               </div>
             </div>
-         <div className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onClick={() => navigate('/pda-toolkit')}>
-  <div className="bg-gradient-to-br from-green-100 to-blue-100 h-48 flex items-center justify-center">
-    <span className="text-6xl">🤝</span>
-  </div>
-  <div className="p-6">
-    <h3 className="text-xl font-bold mb-2">PDA Choice Toolkit</h3>
-    <p className="text-gray-600 mb-4">Turn demands into choices for pathological demand avoidance</p>
-    <div className="flex justify-between items-center">
-      <span className="text-sm text-gray-500">4 tools • All ages</span>
-      <div className="flex items-center">
-        <Star className="h-4 w-4 text-yellow-400 mr-1" />
-        <span className="text-sm text-green-600 font-bold">NEW!</span>
-      </div>
-    </div>
-  </div>
-</div>
+            
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onClick={() => navigate('/pda-toolkit')}>
+              <div className="bg-gradient-to-br from-green-100 to-blue-100 h-48 flex items-center justify-center">
+                <span className="text-6xl">🤝</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">PDA Choice Toolkit</h3>
+                <p className="text-gray-600 mb-4">Turn demands into choices for pathological demand avoidance</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-gray-500">4 tools • All ages</span>
+                  <div className="flex items-center">
+                    <Crown className="h-4 w-4 text-purple-500 mr-1" />
+                    <span className="text-sm text-purple-600">Premium</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -287,7 +287,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Pricing */}
+      {/* Pricing - NOW ONLY 2 TIERS */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -295,15 +295,15 @@ const LandingPage = () => {
             <p className="text-xl text-gray-600">Choose the plan that works for your family</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Basic</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-2">£19<span className="text-lg font-normal text-gray-600">/month</span></div>
+              <div className="text-4xl font-bold text-gray-900 mb-2">£9<span className="text-lg font-normal text-gray-600">/month</span></div>
               <p className="text-gray-600 mb-6">Perfect for getting started</p>
               <ul className="space-y-3 mb-8">
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" />Access to all PDF resources</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" />Unlimited downloads</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" />New resources weekly</li>
+                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" />Free Planner tool</li>
+                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" />All online tools</li>
+                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" />Standard PDF downloads</li>
                 <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" />Email support</li>
               </ul>
               <button className="w-full bg-gray-600 text-white py-3 rounded-lg hover:bg-gray-700 transition-colors">
@@ -318,31 +318,17 @@ const LandingPage = () => {
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-4">Premium</h3>
-              <div className="text-4xl font-bold mb-2">£39<span className="text-lg font-normal opacity-80">/month</span></div>
+              <div className="text-4xl font-bold mb-2">£19<span className="text-lg font-normal opacity-80">/month</span></div>
               <p className="opacity-80 mb-6">Everything you need</p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center"><CheckCircle className="h-5 w-5 text-yellow-400 mr-2" />Everything in Basic</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-yellow-400 mr-2" />Editable PowerPoint versions</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-yellow-400 mr-2" />Priority email support</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-yellow-400 mr-2" />Custom resource requests</li>
+                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-yellow-400 mr-2" />ADHD Focus Toolkit</li>
+                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-yellow-400 mr-2" />PDA Choice Toolkit</li>
+                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-yellow-400 mr-2" />Editable templates</li>
+                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-yellow-400 mr-2" />Priority support</li>
               </ul>
               <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-gray-100 transition-colors font-bold">
                 Start Free Trial
-              </button>
-            </div>
-            
-            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-2">£99<span className="text-lg font-normal text-gray-600">/month</span></div>
-              <p className="text-gray-600 mb-6">For schools and professionals</p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" />Everything in Premium</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" />Commercial usage rights</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" />Bulk download access</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" />Priority phone support</li>
-              </ul>
-              <button className="w-full bg-gray-600 text-white py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                Contact Sales
               </button>
             </div>
           </div>
@@ -618,9 +604,8 @@ const SignupPage = () => {
                   onChange={handleChange}
                   className="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-purple-500 focus:border-purple-500"
                 >
-                  <option value="basic">Basic - £19/month</option>
-                  <option value="premium">Premium - £39/month</option>
-                  <option value="professional">Professional - £99/month</option>
+                  <option value="basic">Basic - £9/month</option>
+                  <option value="premium">Premium - £19/month</option>
                 </select>
               </div>
             </div>
@@ -652,7 +637,7 @@ const SignupPage = () => {
   );
 };
 
-// Dashboard Component (from our previous design)
+// Dashboard Component (keeping your existing dashboard code)
 const Dashboard = () => {
   const { user, logout } = useAuth();
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -675,7 +660,7 @@ const Dashboard = () => {
   const stats = {
     totalResources: 156,
     newThisWeek: 8,
-    mostPopular: "ASD Visual Schedules",
+    mostPopular: "Visual Schedules",
     downloadStreak: 12
   };
 
@@ -683,6 +668,7 @@ const Dashboard = () => {
     { id: 'all', name: 'All Resources', icon: '📚', count: 156 },
     { id: 'asd', name: 'Autism (ASD)', icon: '🌈', count: 34 },
     { id: 'adhd', name: 'ADHD', icon: '⚡', count: 28 },
+    { id: 'pda', name: 'PDA', icon: '🤝', count: 15 },
     { id: 'dyslexia', name: 'Dyslexia', icon: '📖', count: 22 },
     { id: 'sensory', name: 'Sensory Support', icon: '✋', count: 18 },
     { id: 'social', name: 'Social Skills', icon: '👥', count: 25 },
@@ -693,7 +679,7 @@ const Dashboard = () => {
   const resources = [
     {
       id: 1,
-      title: "ASD Visual Schedule Templates",
+      title: "Visual Schedule Templates",
       description: "30+ customizable daily routine schedules with transition cards",
       category: "asd",
       type: "Templates",
@@ -725,6 +711,22 @@ const Dashboard = () => {
     },
     {
       id: 3,
+      title: "PDA Choice Toolkit",
+      description: "Turn demands into choices for pathological demand avoidance",
+      category: "pda",
+      type: "Toolkit",
+      pages: 8,
+      downloads: 856,
+      rating: 4.9,
+      isPremium: true,
+      isNew: true,
+      tags: ["choice", "autonomy", "collaboration"],
+      ageRange: "3-16",
+      thumbnail: "🤝",
+      estimatedTime: "Daily use"
+    },
+    {
+      id: 4,
       title: "Social Stories Collection",
       description: "Ready-made social stories for common situations and challenges",
       category: "social",
@@ -740,7 +742,7 @@ const Dashboard = () => {
       estimatedTime: "10 min reading"
     },
     {
-      id: 4,
+      id: 5,
       title: "Sensory Break Activity Cards",
       description: "Quick sensory regulation activities for home and classroom",
       category: "sensory",
@@ -756,7 +758,7 @@ const Dashboard = () => {
       estimatedTime: "2-5 min activities"
     },
     {
-      id: 5,
+      id: 6,
       title: "Feelings Thermometer & Coping Strategies",
       description: "Visual emotional regulation tools with coping strategy menu",
       category: "behavior",
@@ -770,30 +772,14 @@ const Dashboard = () => {
       ageRange: "5-16",
       thumbnail: "🎯",
       estimatedTime: "Daily check-ins"
-    },
-    {
-      id: 6,
-      title: "Transition Planning Workbook",
-      description: "Comprehensive guide for post-16 transitions and life skills",
-      category: "transition",
-      type: "Workbook",
-      pages: 24,
-      downloads: 876,
-      rating: 4.9,
-      isPremium: true,
-      isNew: true,
-      tags: ["transition", "life-skills", "planning"],
-      ageRange: "14-19",
-      thumbnail: "🔄",
-      estimatedTime: "Ongoing project"
     }
   ];
 
   const recentActivity = [
-    { action: "Downloaded", resource: "ASD Visual Schedules", time: "2 hours ago" },
+    { action: "Downloaded", resource: "Visual Schedules", time: "2 hours ago" },
     { action: "Favorited", resource: "ADHD Focus Toolkit", time: "1 day ago" },
-    { action: "Downloaded", resource: "Social Stories Collection", time: "3 days ago" },
-    { action: "Downloaded", resource: "Sensory Break Cards", time: "1 week ago" }
+    { action: "Downloaded", resource: "PDA Choice Toolkit", time: "2 days ago" },
+    { action: "Downloaded", resource: "Social Stories Collection", time: "3 days ago" }
   ];
 
   const toggleFavorite = (resourceId) => {
@@ -1139,7 +1125,7 @@ const Dashboard = () => {
         {sidebarOpen && user?.plan !== 'Premium' && (
           <div className="mt-8 p-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg">
             <div className="text-sm font-medium mb-2">Upgrade to Premium</div>
-            <div className="text-xs mb-3">Access editable templates and advanced resources.</div>
+            <div className="text-xs mb-3">Access ADHD & PDA toolkits plus editable templates.</div>
             <button className="w-full bg-white text-purple-600 py-2 px-3 rounded text-sm font-medium hover:bg-gray-100 transition-colors">
               Upgrade Plan
             </button>
@@ -1259,13 +1245,13 @@ const App = () => {
   return (
     <AuthProvider>
       <Router>
-      <Routes>
-  <Route path="/" element={<LandingPage />} />
-  <Route path="/login" element={<LoginPage />} />
-  <Route path="/signup" element={<SignupPage />} />
-  <Route path="/rise-planner" element={<RISEPlanner />} />
-    <Route path="/adhd-toolkit" element={<ADHDFocusToolkit />} />
-    <Route path="/pda-toolkit" element={<PDAChoiceToolkit />} />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/sen-planner" element={<SENPlanner />} />
+          <Route path="/adhd-toolkit" element={<ADHDFocusToolkit />} />
+          <Route path="/pda-toolkit" element={<PDAChoiceToolkit />} />
           <Route
             path="/dashboard"
             element={
