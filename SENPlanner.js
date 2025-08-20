@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Download, Plus, X, Clock, User, Palette, FileText, Star, ArrowRight, AlertCircle, Heart, Zap, Target, Home, Settings, CheckCircle, Timer, Smile } from 'lucide-react';
 
-const RISEPlanner = () => {
+const SENPlanner = () => {
   const [childName, setChildName] = useState('');
   const [scheduleType, setScheduleType] = useState('daily');
   const [iconStyle, setIconStyle] = useState('cartoon');
@@ -160,7 +160,7 @@ const RISEPlanner = () => {
   };
 
   const downloadSchedule = () => {
-    alert(`🎉 Your RISE Planner schedule "${childName ? `${childName}'s` : 'My'} ${scheduleType} routine" is being generated!\n\nIn a real implementation, this would create a beautiful, professional PDF tailored exactly to your child's needs - something that actually works, unlike those generic templates that never quite fit.`);
+    alert(`🎉 Your SEN Planner schedule "${childName ? `${childName}'s` : 'My'} ${scheduleType} routine" is being generated!\n\nIn a real implementation, this would create a beautiful, professional PDF tailored exactly to your child's needs - something that actually works, unlike those generic templates that never quite fit.`);
   };
 
   const SchedulePreview = () => {
@@ -176,7 +176,7 @@ const RISEPlanner = () => {
           <div className="flex items-center justify-center mb-4">
             <Star className="h-8 w-8 text-yellow-500 mr-2" />
             <h2 className="text-3xl font-bold text-purple-600">
-              {childName ? `${childName}'s` : 'My'} RISE Planner
+              {childName ? `${childName}'s` : 'My'} SEN Planner
             </h2>
             <Star className="h-8 w-8 text-yellow-500 ml-2" />
           </div>
@@ -184,7 +184,7 @@ const RISEPlanner = () => {
             {scheduleType === 'daily' ? 'Daily Routine' : 'Weekly Plan'} • {selectedActivities.length} activities
           </p>
           <p className="text-sm text-purple-600 font-medium">
-            Routine • Independence • Support • Empowerment
+            Supporting Independence • Visual Structure • Calm Routines
           </p>
         </div>
 
@@ -262,7 +262,7 @@ const RISEPlanner = () => {
             className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-10 py-4 rounded-xl font-bold text-xl hover:from-purple-700 hover:to-blue-700 transition-all flex items-center mx-auto shadow-lg"
           >
             <Download className="h-6 w-6 mr-3" />
-            Download Your RISE Planner
+            Download Your SEN Planner
           </button>
           <p className="text-sm text-gray-600 mt-3">
             High-quality PDF designed specifically for your child • Print on A4 • Laminate for reuse
@@ -284,10 +284,10 @@ const RISEPlanner = () => {
             <div className="bg-white bg-opacity-20 p-4 rounded-full mr-4">
               <Zap className="h-10 w-10" />
             </div>
-            <h1 className="text-5xl font-bold">RISE Planner</h1>
+            <h1 className="text-5xl font-bold">SEN Planner</h1>
           </div>
           <p className="text-xl text-purple-100 mb-4">
-            <span className="font-semibold">Routine • Independence • Support • Empowerment</span>
+            <span className="font-semibold">Special Educational Needs • Visual Support • Structured Routines</span>
           </p>
           <p className="text-lg text-blue-100 max-w-4xl mx-auto">
             Create personalised visual schedules for families who benefit from structured routines. Perfect for home educators 
@@ -304,7 +304,7 @@ const RISEPlanner = () => {
               <div className="bg-white rounded-xl shadow-lg p-6 sticky top-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
                   <Settings className="h-6 w-6 mr-2 text-purple-600" />
-                  Your RISE Planner
+                  Your SEN Planner
                 </h3>
 
                 <div className="space-y-6">
@@ -423,7 +423,7 @@ const RISEPlanner = () => {
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-lg font-bold hover:from-purple-700 hover:to-blue-700 transition-all flex items-center justify-center"
                     >
                       <FileText className="h-5 w-5 mr-2" />
-                      Preview Your RISE Planner
+                      Preview Your SEN Planner
                     </button>
                   )}
                 </div>
@@ -522,7 +522,7 @@ const RISEPlanner = () => {
                 Back to Edit
               </button>
               <div className="text-center">
-                <h2 className="text-2xl font-bold text-gray-900">Your RISE Planner Preview</h2>
+                <h2 className="text-2xl font-bold text-gray-900">Your SEN Planner Preview</h2>
                 <p className="text-gray-600">Review your schedule before downloading</p>
               </div>
               <div className="w-32"></div>
@@ -535,4 +535,4 @@ const RISEPlanner = () => {
   );
 };
 
-export default RISEPlanner;
+export default SENPlanner;
